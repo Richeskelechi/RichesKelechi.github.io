@@ -1,0 +1,232 @@
+*{
+    font-family: verdana;
+    margin: 0;
+}
+body{
+    background: hsl(0, 0%, 95%);
+    font-size: 15px;
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.wrapper{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+nav{
+    background: #333;
+}
+nav ul{
+    list-style-type: none;
+    padding: 0
+}
+nav ul li a{
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    display: block;
+    padding:10px;
+}
+nav ul li a:hover{
+    background-color: #555
+}
+#blocks{
+    width: 100%;
+    max-width: 1440px;
+    background: hsl(0, 0%, 95%);
+    height:94vh;
+    display:flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#blocks .box{
+    height: 400px;
+    flex: 0 0 300px;
+    display: flex;
+}
+#blocks .box section{
+    width: 70%;
+    height: 80%;
+    margin: 50px auto;
+    flex-flow: column;
+    flex-wrap: wrap;
+}
+#blocks .box section div{
+    flex:0 0 300px;
+    margin-bottom: 10px;
+    color: white;
+}
+#blocks .box section div.head{
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 2;
+    color:hsl(0, 0%, 95%)
+}
+#blocks .box section div.write{
+    font-size: 15px;
+    font-family: verdana;
+    letter-spacing:1;
+    color:hsla(0, 0%, 100%, 0.75)
+}
+#blocks .box section div.btn button{
+    border: none;
+    outline: none;
+    padding:12px;
+    width:150px;
+    margin-top: 30px;
+    border-radius: 50px;
+    color:hsl(31, 77%, 52%);
+    background-color:hsl(0, 0%, 95%)
+}
+#blocks .box section div.btnTwo button{
+    border: none;
+    outline: none;
+    padding:12px;
+    width:150px;
+    margin-top: 30px;
+    border-radius: 50px;
+    color:hsl(184, 100%, 22%);
+    background-color:hsl(0, 0%, 95%)
+}
+#blocks .box section div.btnThree button{
+    border: none;
+    outline: none;
+    padding:12px;
+    width:150px;
+    margin-top: 30px;
+    border-radius: 50px;
+    color:hsl(179, 100%, 13%);
+    background-color:hsl(0, 0%, 95%)
+}
+#blocks .box.one{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: hsl(31, 77%, 52%);
+}
+#blocks .box.two{
+    background: hsl(184, 100%, 22%);
+}
+#blocks .box.three{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: hsl(179, 100%, 13%);
+}
+@media screen and (min-width: 375px){
+    nav ul{
+        display: flex;
+        justify-content: flex-start;
+    }
+    nav ul li{
+        width:160px;
+    }
+}
+@media screen and (min-width: 375px) and (max-width: 750px){
+    #blocks .box section div.btnThree button{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    #blocks .box{
+        height: 400px;
+        flex: 0 0 90%; 
+    }
+    #blocks .box.one{
+        border-top-left-radius: none !important;
+        border-bottom-left-radius:none !important;
+        border-radius: 10px;
+    }
+    #blocks .box.two{
+        border-radius: 10px;
+    }
+    #blocks .box.three{
+        border-top-left-radius: none !important;
+        border-bottom-left-radius:none !important;
+        border-radius: 10px;
+    }
+    
+}
+@media screen and (max-width: 599px){
+    #blocks .box{
+        height: 400px;
+        flex: 0 0 80%;
+    }
+    #blocks .box.one{
+        border-top-left-radius: none !important;
+        border-bottom-left-radius:none !important;
+        border-radius: 10px;
+    }
+    #blocks .box.two{
+        border-radius: 10px;
+    }
+    #blocks .box.three{
+        border-top-left-radius: none !important;
+        border-bottom-left-radius:none !important;
+        border-radius: 10px;
+    }
+    
+}
+@media screen and (min-width: 600px){
+    #blocks .box{
+        height: 400px;
+        flex: 0 0 200px;
+    }
+}
+@media screen and (min-width: 751px){
+    #blocks .box{
+        height: 400px;
+        flex: 0 0 250px;
+    }
+}
+@media screen and (min-width: 900px){
+    #blocks .box{
+        height: 400px;
+        flex: 0 0 300px;
+    }
+}
+
+/* Grid Styles start Here  */
+
+.grid-container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.grid-container .container-bag{
+    width: 95%;
+    height: 95%;
+    margin: 50px auto;
+    background: hsl(0, 0%, 0%);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, minmax(150px, auto));
+    grid-gap:10px;
+}
+.grid-container div{
+    margin-top: 10px;
+    background: #3bbced;
+    padding: 30px;
+}
+.grid-container div:nth-child(even){
+    background: #777;
+}
+.grid-container .one{
+    grid-column: 1 / 4;
+}
+.grid-container .two{
+    grid-column: 4 / 6;
+}
+.grid-container .three{
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+}
+.grid-container .four{
+    grid-column: 3 / 6;
+    grid-row: 2 / 3;
+}
+.grid-container .five{
+    grid-column: 3 / 6;
+    grid-row: 3 / 4;
+}
