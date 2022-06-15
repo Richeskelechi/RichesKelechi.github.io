@@ -2,12 +2,7 @@
     font-family: verdana;
     margin: 0;
 }
-body{
-    background: hsl(0, 0%, 95%);
-    font-size: 15px;
-    font-family: 'Big Shoulders Display', cursive;
-    font-family: 'Lexend Deca', sans-serif;
-}
+/* Navigation styles starts Here */
 .wrapper{
     width: 100%;
     max-width: 1440px;
@@ -30,89 +25,6 @@ nav ul li a{
 nav ul li a:hover{
     background-color: #555
 }
-#blocks{
-    width: 100%;
-    max-width: 1440px;
-    background: hsl(0, 0%, 95%);
-    height:94vh;
-    display:flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-#blocks .box{
-    height: 400px;
-    flex: 0 0 300px;
-    display: flex;
-}
-#blocks .box section{
-    width: 70%;
-    height: 80%;
-    margin: 50px auto;
-    flex-flow: column;
-    flex-wrap: wrap;
-}
-#blocks .box section div{
-    flex:0 0 300px;
-    margin-bottom: 10px;
-    color: white;
-}
-#blocks .box section div.head{
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 2;
-    color:hsl(0, 0%, 95%)
-}
-#blocks .box section div.write{
-    font-size: 15px;
-    font-family: verdana;
-    letter-spacing:1;
-    color:hsla(0, 0%, 100%, 0.75)
-}
-#blocks .box section div.btn button{
-    border: none;
-    outline: none;
-    padding:12px;
-    width:150px;
-    margin-top: 30px;
-    border-radius: 50px;
-    color:hsl(31, 77%, 52%);
-    background-color:hsl(0, 0%, 95%)
-}
-#blocks .box section div.btnTwo button{
-    border: none;
-    outline: none;
-    padding:12px;
-    width:150px;
-    margin-top: 30px;
-    border-radius: 50px;
-    color:hsl(184, 100%, 22%);
-    background-color:hsl(0, 0%, 95%)
-}
-#blocks .box section div.btnThree button{
-    border: none;
-    outline: none;
-    padding:12px;
-    width:150px;
-    margin-top: 30px;
-    border-radius: 50px;
-    color:hsl(179, 100%, 13%);
-    background-color:hsl(0, 0%, 95%)
-}
-#blocks .box.one{
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background: hsl(31, 77%, 52%);
-}
-#blocks .box.two{
-    background: hsl(184, 100%, 22%);
-}
-#blocks .box.three{
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background: hsl(179, 100%, 13%);
-}
 @media screen and (min-width: 375px){
     nav ul{
         display: flex;
@@ -122,73 +34,94 @@ nav ul li a:hover{
         width:160px;
     }
 }
-@media screen and (min-width: 375px) and (max-width: 750px){
-    #blocks .box section div.btnThree button{
-        margin-top: 10px;
-    }
+/* Navigation styles Ends here  */
+/* FlexBox Styles Starts Here */
+body.index{  
+    width: 100%;  
+    min-height: 100vh;  
+    display: flex;  
+    justify-content: center;  
+    align-content: center;  
+}  
+.box-conatiner{  
+    width: 100%; 
+    margin-top: 50px; 
+    max-width: 1440px;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    flex-flow: wrap;  
+}  
+.box-conatiner .box{  
+    width: 269px;  
+    padding: 15px;  
+    min-height: 430px;  
+}  
+.box-conatiner .box.box1{  
+    background-color: hsl(31,77%,52%);  
+    border-top-left-radius: 10px;  
+    border-bottom-left-radius: 10px;  
+}  
+.box-conatiner .box.box2{  
+    background-color: hsl(184,100%,22%);  
+}  
+.box-conatiner .box.box3{  
+    background-color: hsl(179,100%,13%);  
+    border-top-right-radius: 10px;  
+    border-bottom-right-radius: 10px;  
+}  
+.box-conatiner .box .content{  
+    padding: 10px;  
+} 
+.box-conatiner .box .content img{ 
+    width:80px;
+} 
+.box-conatiner .box .content h1{  
+    color: hsl(0,0%,95%);  
+    text-transform: uppercase;  
+    font-family: 'Lexend Deca', sans-serif;  
+    margin: 20px 0;  
+}  
+.box-conatiner .box .content p{  
+    color: hsla(0,0%,100%,0.75);  
+    line-height: 1.7;
+    font-family: 'Big Shoulders Display', cursive;  
+}  
+.box-conatiner .box .content .btn{  
+    margin: 60px 0;  
+    padding: 15px 40px;  
+    border: 0;  
+    border-radius: 30px;  
+    outline: none;  
+    background-color: #FFF;  
+    font-size: 15px;  
+    cursor: pointer;  
+    font-family: 'Lexend Deca', sans-serif;  
+    font-weight: 700;  
+}  
+.box-conatiner .box .content .btn.btn1{  
+    color: hsl(31, 77%, 52%);  
+}  
+.box-conatiner .box .content .btn.btn2{  
+    color: hsl(184, 100%, 22%);  
+}  
+.box-conatiner .box .content .btn.btn3{  
+    color: hsl(179, 100%, 13%);  
+}  
+.box-conatiner .box .content .btn:hover{  
+    background-color: transparent;  
+    border: 2px solid #FFF;  
+    color: #FFF;  
+    transition: 0.4s;  
 }
-
-@media screen and (max-width: 375px){
-    #blocks .box{
-        height: 400px;
-        flex: 0 0 90%; 
-    }
-    #blocks .box.one{
-        border-top-left-radius: none !important;
-        border-bottom-left-radius:none !important;
-        border-radius: 10px;
-    }
-    #blocks .box.two{
-        border-radius: 10px;
-    }
-    #blocks .box.three{
-        border-top-left-radius: none !important;
-        border-bottom-left-radius:none !important;
-        border-radius: 10px;
-    }
-    
-}
-@media screen and (max-width: 599px){
-    #blocks .box{
-        height: 400px;
-        flex: 0 0 80%;
-    }
-    #blocks .box.one{
-        border-top-left-radius: none !important;
-        border-bottom-left-radius:none !important;
-        border-radius: 10px;
-    }
-    #blocks .box.two{
-        border-radius: 10px;
-    }
-    #blocks .box.three{
-        border-top-left-radius: none !important;
-        border-bottom-left-radius:none !important;
-        border-radius: 10px;
-    }
-    
-}
-@media screen and (min-width: 600px){
-    #blocks .box{
-        height: 400px;
-        flex: 0 0 200px;
-    }
-}
-@media screen and (min-width: 751px){
-    #blocks .box{
-        height: 400px;
-        flex: 0 0 250px;
-    }
-}
-@media screen and (min-width: 900px){
-    #blocks .box{
-        height: 400px;
-        flex: 0 0 300px;
-    }
-}
-
+/* FlexBox styles Ends Here  */
 /* Grid Styles start Here  */
-
+body.gridBody{
+    background: hsl(0, 0%, 95%);
+    font-size: 15px;
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+}
 .grid-container{
     max-width: 960px;
     margin: 0 auto;
@@ -230,3 +163,4 @@ nav ul li a:hover{
     grid-column: 3 / 6;
     grid-row: 3 / 4;
 }
+/* Grid styles Ends here. */
