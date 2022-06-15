@@ -35,6 +35,7 @@ nav ul li a:hover{
     }
 }
 /* Navigation styles Ends here  */
+
 /* FlexBox Styles Starts Here */
 body.index{  
     width: 100%;  
@@ -115,6 +116,7 @@ body.index{
     transition: 0.4s;  
 }
 /* FlexBox styles Ends Here  */
+
 /* Grid Styles start Here  */
 body.gridBody{
     background: hsl(0, 0%, 95%);
